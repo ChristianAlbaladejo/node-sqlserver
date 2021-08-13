@@ -6,17 +6,23 @@ import {
   deleteProductById,
   getTotalProducts,
   updateProductById,
+  login,
+  saveOrder
 } from "../controllers/products.controller";
 
 const router = Router();
 
 router.get("/products", getProducts);
 
-router.post("/products", createNewProduct);
-
 router.get("/products/count", getTotalProducts);
 
 router.get("/products/:id", getProductById);
+
+router.post("/login", login);
+
+router.post("/save", saveOrder);
+
+router.post("/products", createNewProduct);
 
 router.delete("/products/:id", deleteProductById);
 
